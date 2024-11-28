@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi feed de Instagram</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Crear la barra de navegación-->
+    <nav class="navbar bg-light py-4">
+        <div class="container-fluid">
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <h4 class="d-inline">Instagram</h4>
+                </div>
+                <div class="d-flex">
+                    <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Nuevo Post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-tertiary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item bg-light" href="#">Tu perfil</a></li>
+                            <li><a class="dropdown-item bg-light" href="#">Accesibilidad</a></li>
+                            <li><a class="dropdown-item bg-light" href="#">Datos y privacidad</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">SALIR</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lo que aparece al pulsar en post nuevo -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModal">Publica un nuevo post:</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Descripción:</h5>
+                    <textarea class="form-control" placeholder="Agrega aquí la descripción de tu post:"></textarea>
+                    <div class="row p-2">
+                        <button class="col-1 p-1 m-1">
+                            <i class="fa-solid fa-camera"></i>
+                        </button>
+                        <button class="col-1 p-1 m-1">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Publicar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!--Ahora las dos secciones-->
+        <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+                    <i class="fa-solid fa-table-cells"></i>
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">
+                    <i class="fa-solid fa-square"></i>
+                </button>
+            </li>
+        </ul>
+        <!-- Secciones -->
+        <div class="tab-content" id="myTabContent">
+            <!-- Fotos 3 por línea -->
+            <div class="tab-pane fade show active overflow-hidden" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab">
+                <div class="row">
+                    <div class="col-4 p-2"><img style="width: 100%; height: 100%; object-fit: cover;" src="https://t4.ftcdn.net/jpg/11/03/78/79/240_F_1103787971_jkd4zGKDvkboGavpRI2OjI0BigLFEv0f.jpg" alt="Foto1"></div>
+                    <div class="col-4 p-2"><img style="width: 100%; height: 100%; object-fit: cover;" src="https://images.pexels.com/photos/29516623/pexels-photo-29516623/free-photo-of-urban-street-scene-with-cartier-storefront.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto2"></div>
+                    <div class="col-4 p-2"><img style="width: 100%; height: 100%; object-fit: cover;" src="https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto3"></div>
+                </div>
+                <div class="row">
+                    <div class="col-4 p-2"><img style="width: 100%; height: 50%; object-fit: cover;" src="https://images.pexels.com/photos/4881557/pexels-photo-4881557.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto4"></div>
+                    <div class="col-4 p-2"><img style="width: 100%; height: 50%; object-fit: cover;" src="https://images.pexels.com/photos/4877837/pexels-photo-4877837.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto5"></div>
+                    <div class="col-4 p-2"><img style="width: 100%; height: 50%; object-fit: cover;" src="https://images.pexels.com/photos/6152258/pexels-photo-6152258.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto6"></div>
+                </div>
+            </div>
+    
+            <!-- Feed ampliado con una foto por línea -->
+            <div class="tab-pane fade overflow-hidden" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="row my-4">
+                    <div class="col-9 border rounded mx-auto p-0">
+                        <div class="card">
+                            <img class="card-img-top" src="https://t4.ftcdn.net/jpg/11/03/78/79/240_F_1103787971_jkd4zGKDvkboGavpRI2OjI0BigLFEv0f.jpg" alt="Foto1" style="width: 100%; height: auto; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Lindo Salón</h5>
+                                <p class="card-text">Un relajante salón en el que puedes llorar bien agusto cuando no encuentras los errores en tu código.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-9 border rounded mx-auto p-0">
+                        <div class="card">
+                            <img class="card-img-top" src="https://images.pexels.com/photos/29516623/pexels-photo-29516623/free-photo-of-urban-street-scene-with-cartier-storefront.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto2" style="width: 100%; height: auto; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Una calle que no conozco, probablemente en un país que tampoco conozco.</h5>
+                                <p class="card-text">Desconozco dónde fue sacada esta foto, pero se ve como un lindo lugar al que ir a pasear después de llorar por no encontrar los errores en tu código.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-9 border rounded mx-auto p-0">
+                        <div class="card">
+                            <img class="card-img-top" src="https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto3" style="width: 100%; height: auto; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Union Jack</h5>
+                                <p class="card-text">Una Union Jack con el único propósito de que Connor sea benevolente y me apruebe todos los proyectos a lo largo del Bootcamp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-9 border rounded mx-auto p-0">
+                        <div class="card">
+                            <img class="card-img-top" src="https://images.pexels.com/photos/4881557/pexels-photo-4881557.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto1" style="width: 100%; height: auto; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Rooftop Date</h5>
+                                <p class="card-text">Preciosa cena en la azotea para reponer energías después de todas las calorías gastadas escribiendo código.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-9 border rounded mx-auto p-0">
+                        <div class="card">
+                            <img class="card-img-top" src="https://images.pexels.com/photos/4877837/pexels-photo-4877837.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto1" style="width: 100%; height: auto; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">La bajada</h5>
+                                <p class="card-text">Aunque una cita en la azotea parezca una idea muy atractiva, esta es la dura realidad, debes bajar por estas escaleras.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-9 border rounded mx-auto p-0">
+                        <div class="card">
+                            <img class="card-img-top" src="https://images.pexels.com/photos/6152258/pexels-photo-6152258.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Foto1" style="width: 100%; height: auto; object-fit: cover;">
+                            <div class="card-body">
+                                <h5 class="card-title">Yaaay!</h5>
+                                <p class="card-text">Por fin terminé este proyecto! (espero).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+                integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+                crossorigin="anonymous"></script>
+</body>
+
+</html>
